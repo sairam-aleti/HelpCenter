@@ -1,34 +1,27 @@
-### Assignment Description:
+Backend Setup:
 
-**Title:** Build a Help Center API
+Overview:
+The backend of this project is built using Node.js with Express as the web application framework. It interacts with a MongoDB database to handle data related to cards, processes requests from the frontend, and sends appropriate responses.
 
-**Objective:**  
-The objective of this assignment is to create a RESTful API that allows users to manage "Help Center" cards. These cards represent different sections of a help center, such as "Branches," "Manage Your Account," "Manage Billing," etc. The API should allow users to create, retrieve these cards.
+Steps to Set Up the Backend:
 
-**Project Requirements:**
+1. Navigate to the `backend` directory:
 
-1. **Set up the project:**
-   - Create a new Node.js project using Express.js.
-   - Set up a basic server with a single endpoint to check if the server is running (e.g., `GET /ping`).
+   cd backend
 
-2. **Create a Card Model:**
-   - Design a model for a card. Each card should have the following fields (You can chooose any ORM and database):
-     - `id` (string): A unique identifier for the card.
-     - `title` (string): The title of the card (e.g., "Branches").
-     - `description` (string): A brief description of what the card represents (e.g., "Abstract Branches lets you manage, version, and document your designs in one place.").
+2. Intialize node project [npm init -y]
 
-3. **Build the API Endpoints:**
-   - **Create a card:** Create an endpoint to add a new card to the help center.
-     - `POST /cards`: This should accept the card details (title, description, link) in the request body and create a new card.
-   - **Get all cards:** Create an endpoint to retrieve all the cards.
-     - `GET /cards`: This should return a list of all cards in the help center.
-   - **Get a specific card:** Create an endpoint to retrieve the details of a single card by its title.
-     - `GET /cards/:title`: This should return the details of a specific card.
+3. Install the following packages : 
+   express [npm install express]
+   mongoose [npm install mongoose]
+   body-parser [npm install body-parser]
+   cors [npm install cors]
+   nodemon [npm install --save-dev nodemon]
+   dotenv [npm install dotenv]
+  
+4. In the env file 
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string_here[add your mongodb tring in here]
 
-4. **Error Handling:**
-   - Implement error handling for cases such as trying to access a non-existent card, validation errors, and server errors.
+5. To start the backend server [npm run dev]
 
-
-### Submission:
-- Provide the source code in a GitHub repository and on the submission of the form, paste the github link.
-- Include a README file with instructions on how to set up and run the project locally.
