@@ -10,7 +10,7 @@ const CardDetail = () => {
   useEffect(() => {
     const fetchCard = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/cards/${title}`);
+        const response = await axios.get(`https://helpcenter-zwmi.onrender.com/api/cards/${title}`);
         if (response.data) {
           setCard(response.data);
         } else {

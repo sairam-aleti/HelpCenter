@@ -10,7 +10,7 @@ const AddCardForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/cards', { title, description });
+      await axios.post('https://helpcenter-zwmi.onrender.com/api/cards', { title, description });
       setTitle('');
       setDescription('');
       setSuccessMessage('Card added successfully!');

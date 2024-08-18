@@ -9,8 +9,8 @@ const CardsSection = ({ searchQuery }) => {
     const fetchCards = async () => {
       try {
         const url = searchQuery
-          ? `http://localhost:5000/api/cards?title=${searchQuery.toLowerCase()}`
-          : 'http://localhost:5000/api/cards';
+          ? `https://helpcenter-zwmi.onrender.com/api/cards?title=${searchQuery.toLowerCase()}`
+          : 'https://helpcenter-zwmi.onrender.com/api/cards';
         const response = await axios.get(url);
         setCards(response.data);
       } catch (error) {
