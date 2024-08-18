@@ -26,8 +26,10 @@ Usage:
 
 Technologies Used:
 
-   Frontend: React, Tailwind CSS
+   Frontend: React, Tailwind CSS 
+   
    Backend: Node.js, Express, MongoDB
+   
    Icons: Heroicons
 
  Project Structure
